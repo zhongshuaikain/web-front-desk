@@ -38,3 +38,6 @@ git的操作基本命令:
     将公钥注册到码云中
     在码云中创建一个仓库(开源许可证采用CPL3.0)
     将码云下载的目录复制到项目目录中，在ideal中打开项目集成git
+    git add .
+    git commit
+    git push
