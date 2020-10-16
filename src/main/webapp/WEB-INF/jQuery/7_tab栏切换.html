@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .box ul {
+            height: 40px;
+            width: 900px;
+            background-color: #ccc;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .box ul li {
+            float: left;
+            padding: 0 20px;
+            height: 40px;
+        }
+
+        .current {
+            background-color: #c81623;
+        }
+
+        .content div{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <ul>
+        <li class="current">商品介绍</li>
+        <li>规格与包装</li>
+        <li>售后保障</li>
+        <li>商品评价</li>
+        <li>手机社区</li>
+    </ul>
+
+
+    <div class="content">
+        <div style="display: block">商品介绍</div>
+        <div>规格与包装</div>
+        <div>售后保障</div>
+        <div>商品评价</div>
+        <div>手机社区</div>
+    </div>
+</div>
+
+<!--jquery类操作与原生js中类操作的区别：中的添加类操作不影响他原本已经存在的类名，而是采取追加类的形式进行操作-->
+<script>
+    $(function () {
+        $(".box ul li").click(function () {
+            // $(this).siblings().removeClass();
+            $(this).addClass('current').siblings().removeClass();
+            var index=$(this).index();
+            $(".content div").eq(index).show().siblings().hide();
+            // $(".content div").eq(index).siblings().hide();
+
+        });
+
+
+    })
+
+
+</script>
+
+</body>
+</html>

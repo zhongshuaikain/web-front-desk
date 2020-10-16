@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        div {
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+        }
+
+        span {
+            display: block;
+            background-color: greenyellow;
+            width: 100px;
+            height: 100px;
+        }
+
+        .current {
+            width: 200px;
+        }
+
+        li {
+            height: 40px;
+            width: 200px;
+            background-color: pink;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div>111</div>
+<span>222</span>
+<ul>
+    <li>123</li>
+    <li>456</li>
+    <li>789</li>
+</ul>
+
+<ol>
+
+</ol>
+<script>
+
+    //单个事件的注册
+    $("div").click(function () {
+        $(this).css({
+            "backgroundColor": "blue"
+        });
+    })
+
+
+    $("div").mouseenter(function () {
+        $(this).css({
+            "backgroundColor": "red"
+        });
+    })
+
+    //将同一个元素绑定不同的事件可以用on
+    $("span").on({
+        click: function () {
+            $(this).css({
+                "backgroundColor": "blue"
+            });
+        },
+        mouseenter: function () {
+            $(this).css({
+                "backgroundColor": "green"
+            });
+        }
+    })
+
+    //如果两个不同的事件处理函数处理的事件是同一个
+    $("span").on("mouseenter mouseleave", function () {
+        $(this).toggleClass("current");
+    })
+
+    //事件处理 on()绑定事件 事件委派
+    // $("ul li").click();
+    $("ul").on("click", "li", function () {
+        alert("事件委派成功");
+    })
+
+
+    //事件处理 on()绑定事件 给动态创建的元素绑定事件
+    $("ol").on("click", "li", function () {
+        alert("未来动态创建的小li，只能用on()函数来预绑定")
+    })
+
+    var li=$("<li>我是后来创建的li</li>")
+    $("ol").append(li);
+</script>
+
+</body>
+</html>

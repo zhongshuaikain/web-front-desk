@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        span {
+            display: none;
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+
+<div></div>
+<span></span>
+
+<!--DOM对象和jQuery对象中的函数是不互通的，不能相互调用其内部函数-->
+<script>
+    // DOM对象转换jQuery
+    var div1 = document.querySelector('div');
+    $(div1);//只需要用$()包裹住DOM对象即可完成转换
+    $(div1).hide();
+
+    // jQuery转换DOM对象
+    var span1 = $('span');//利用jquery方式获取span
+    span1[0].style.display = 'block';
+</script>
+</body>
+</html>

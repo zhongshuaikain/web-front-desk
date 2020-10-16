@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    var arr=[1,2,3,4,5,3,7,8,9,0];
+    //方法一
+    console.log(arr.toString());
+
+    //方法二 加分隔符
+    console.log(arr.join('-'));
+
+    //查询数组或字符串中某个元素的索引
+        /*
+           str.indexof( '要查找的字符', [起始的位置]);    从前往后查找，找不到就返回-1
+           str.lastindexof( '要查找的字符', [起始的位置]);    从后往前查找，只找第一个匹配的
+
+         */
+    console.log(arr.indexOf(3));
+    console.log(arr.indexOf(3,[3]));
+
+    console.log(arr.lastIndexOf(3));
+    console.log(arr.lastIndexOf(3,[9]));
+
+
+
+</script>
+
+</body>
+</html>

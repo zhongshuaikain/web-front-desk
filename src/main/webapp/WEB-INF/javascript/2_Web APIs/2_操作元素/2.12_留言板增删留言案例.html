@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            margin: 100px auto;
+        }
+
+        .btn {
+            width: 50px;
+            height: 20px;
+            outline: none;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            width: 300px;
+            height: 30px;
+            background-color: pink;
+            margin: 10px 0;
+            line-height: 30px;
+            padding: 5px 10px;
+        }
+
+        .fr_ul li a {
+            float: right;
+            color: #666;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <textarea cols="30" rows="10">111</textarea>
+    <button class="btn">提交</button>
+    <ul class="fr_ul">
+        <li>11111 <a href="javascript:;">删除</a></li>
+        <li>12222 <a href="javascript:;">删除</a></li>
+    </ul>
+</div>
+
+<script>
+    var btn = document.querySelector("button");
+    var text = document.querySelector("textarea");
+    var ul = document.querySelector('.fr_ul');
+
+    btn.onclick = function () {
+        if (text.value == '') {
+            alert('您没有输入留言内容');
+            return false;
+        } else {
+            var li = document.createElement("li");
+            li.innerHTML = text.value + "<a href='javascript:;'>删除</a>";
+            ul.insertBefore(li, ul.children[0]);
+            text.value = '';
+
+            var as = document.querySelectorAll('a');
+            for (var i = 0; i < as.length; i++) {
+                as[i].onclick = function () {
+                    ul.removeChild(this.parentNode);
+                }
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>

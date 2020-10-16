@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div></div>
+<button class="btn">后退</button>
+<script>
+    var btn = document.querySelector('.btn');
+    btn.addEventListener('click', function () {
+        history.back();
+        // history.go(-1); 相当于后退一个页面
+    });
+    var div = document.querySelector('div');
+    var canshu = location.search;
+    var values = canshu.substr(1);
+    var arr = values.split('=');
+    console.log(arr);
+    div.innerHTML = arr[1] + '，欢迎您的到来';
+</script>
+</body>
+</html>

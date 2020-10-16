@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function countDown(time) {
+        var nowTime = +new Date();
+        var inputTime = +new Date(time);
+        var times = (inputTime - nowTime)/1000;
+        var day = parseInt(times / 60 / 60 / 24);
+        day=day<10?'0'+day:day;
+        var hours = parseInt(times / 60 / 60 % 24);
+        hours=hours<10?'0'+hours:hours;
+        var min = parseInt(times / 60 % 60);
+        min=min<10?'0'+min:min;
+        var seconds = parseInt(times % 60);
+        seconds=seconds<10?'0'+seconds:seconds;
+        return '距离北京时间 2020-4-12 24:00:00还剩'+day+ '天' + hours + "时" + min + "分" + seconds+'秒';
+    }
+
+    var t = countDown('2020-4-12 24:00:00');
+    alert(t);
+
+</script>
+
+</body>
+</html>

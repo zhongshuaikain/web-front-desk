@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+
+   f1();
+   console.log(c);
+   console.log(b);
+   console.log(a);
+
+   function f1() {
+       var a = b = c = 9;//var a = b = c = 9;等价于 var a=9; b=9; c=9;此处b,c相当于全局变量
+       console.log(a);
+       console.log(b);
+       console.log(c);
+   }
+
+    //预解析后等价代码如下：
+    function f1() {
+        var a=9;
+        b=9;
+        c=9;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+    f1();
+    console.log(c);
+    console.log(b);
+    console.log(a);
+
+
+</script>
+<body>
+
+</body>
+</html>

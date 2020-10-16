@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function timer() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth();
+        var day = date.getDate();
+        var week = date.getDay();
+        arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+
+        var hours = date.getHours();
+        hours = hours < 10 ? '0' + hours : hours;
+        var min = date.getMinutes();
+        min = min < 10 ? '0' + min : min;
+        var seconds = date.getSeconds();
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        return ('现在是北京时间' + year + '年' + month + '月' + day + '日' + arr[week] + hours + ':' + min + ':' + seconds);
+    }
+
+
+    alert(timer());
+
+
+</script>
+</body>
+</html>

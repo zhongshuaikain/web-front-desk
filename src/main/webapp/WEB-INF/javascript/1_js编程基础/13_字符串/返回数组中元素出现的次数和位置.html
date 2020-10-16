@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var arr=[ 'red','blue','red','green','yellow','red','pink'];
+    var num=0;
+
+    var index=arr.indexOf('red');
+    while (index!=-1){
+        console.log(index);
+        num+=1;
+        index=arr.indexOf('red',index+1);
+    }
+
+    console.log('red出现的次数是'+num+'次');
+
+
+
+</script>
+
+</body>
+</html>

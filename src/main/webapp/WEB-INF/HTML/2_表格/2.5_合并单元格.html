@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+合并单元格三部曲
+    1. 先确定是跨行还是跨列合并
+    2. 根据 先上后下、先左后右的原则找到目标单元格，然后写上要合并的方式和合并单元格的数量
+       如<td colspan="3"></td> 表示跨列合并三个单元格
+         <td rowspan="3"></td> 表示跨行合并三个单元格
+    3. 删除多余的单元格
+-->
+
+<table border="1px" align="center" cellspacing="0" cellpadding="15px" width="500px">
+    <caption> <h4>个人简历</h4> </caption>
+    <tr>
+        <td> 刘德华</td>
+        <td> 男</td>
+        <td> 18</td>
+        <td rowspan="2"> 照片</td>
+    </tr>
+    <tr>
+        <td> 身高180</td>
+        <td> 汉族</td>
+        <td> 已婚</td>
+        <!--    <td> 照片 </td>   -->
+    </tr>
+    <tr>
+        <td> 个人作品</td>
+        <td colspan="3"> 个人作品</td>
+        <!--        <td> 个人作品 </td>-->
+        <!--        <td> 个人作品 </td>-->
+    </tr>
+    <tr>
+        <td> 个人简历</td>
+        <td colspan="3"> 个人简历</td>
+        <!--        <td> 个人简历 </td>-->
+        <!--        <td> 个人简历 </td>-->
+    </tr>
+
+
+</table>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .box {
+            position: relative;
+            width: 400px;
+            border-bottom: 1px solid #ccc;
+            margin: 100px auto;
+        }
+
+        .box input {
+            width: 370px;
+            height: 30px;
+            border: 0;
+            outline: none;
+        }
+
+        .box img {
+            position: absolute;
+            top: 8px;
+            right: -3px;
+            width: 25px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <label for=""> <img src="../image/闭眼.png"> </label>
+    <input type="password" value="" name="password" id="">
+</div>
+
+<script>
+    var getImg = document.querySelector('img');
+    var getInput = document.querySelector('input');
+    var flag=0;
+    getImg.onclick = function () {
+        if (flag==0){
+            getInput.type='text';
+            getImg.src='../image/睁眼.png';
+            flag=1;
+        }else {
+            getInput.type='password';
+            getImg.src='../image/闭眼.png';
+            flag=0;
+        }
+
+    }
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+    var money = 0;
+    do {
+        var figure = prompt('请输入您要的操作：' + '\n' +
+            '1.存钱' + '\n' +
+            '2.取钱' + '\n' +
+            '3.查询余额' + '\n' +
+            '4.退出');
+
+        switch (figure) {
+            case '1':
+                var setMoney = prompt('请输入您要存钱的金额');
+                money = parseFloat(setMoney) + parseFloat(money);
+                alert('您的余额共计' + money + '元');
+                break;
+            case '2':
+                var getMoney = prompt('请输入你的取钱金额');
+                money = money - getMoney;
+                alert('您的余额还剩' + money + '元');
+                break;
+            case '3':
+                alert('查询您的余额共计' + money + '元');
+                break;
+            case '4':
+                alert('您即将退出本系统！');
+                break;
+            default:
+                alert('您输入的是非法字符，请正确操作');
+                break;
+        }
+
+    } while (figure !== '4')
+
+
+</script>
+
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+     事件三要素： 事件源、事件类型、事件处理程序
+     事件源.事件类型=事件处理程序;
+-->
+
+<!--   写一个程序 当点一一个按钮后，页面弹出对话框   -->
+<button id="button1">
+    唐伯虎
+</button>
+
+<script>
+    var button = document.getElementById('button1');
+    button.onclick = function () {
+        alert("点秋香！");
+    }
+
+
+</script>
+</body>
+</html>

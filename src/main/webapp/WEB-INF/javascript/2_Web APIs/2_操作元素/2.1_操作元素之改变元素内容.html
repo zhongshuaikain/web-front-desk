@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- 需求：点击按钮，改变div内的文字，显示当前系统的时间-->
+<p name="1">
+    以下是你将会进行的操作：
+</p>
+<button id="btn">显示当前时间</button>
+<div id="div">当前区域为时间显示区域</div>
+
+
+<script>
+    function timer() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth();
+        var days = date.getDate();
+        var week = date.getDay();
+        var arr = [' 周日 ', ' 周一 ', ' 周二 ', ' 周三 ', ' 周四 ', ' 周五 ', ' 周六 '];
+        var hours = date.getHours();
+        hours = hours < 10 ? '0' + hours : hours;
+        var min = date.getMinutes();
+        min = min < 10 ? '0' + min : min;
+        var s = date.getSeconds();
+        s = s < 10 ? '0' + s : s;
+        return ('现在是北京时间 ' + year + '年' + month + '月' + days + '日' + arr[week] + hours + ':' + min + ':' + s);
+    }
+
+    var getbtn = document.getElementById('btn');
+    var getdiv = document.getElementById('div');
+    console.log(getdiv);
+    console.log(getbtn);
+
+    getbtn.onclick = function () {
+        getdiv.innerText = timer();
+    }
+
+    var getP=document.querySelector('p');
+    getP.innerText=timer();
+</script>
+
+
+</body>
+</html>

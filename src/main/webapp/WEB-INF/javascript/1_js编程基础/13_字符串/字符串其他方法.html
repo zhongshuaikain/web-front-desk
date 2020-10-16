@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // 替换字符串
+    var str = 'andy';
+    console.log(str.replace('a', 'b'));
+    //有一个字符串要求把里面所有的o替换成*
+    var str1 = 'ajsofosocfoewoso';
+    while (str1.indexOf('o') !=-1) {
+        str1=str1.replace('o', '*');
+    }
+    alert(str1);
+
+
+    //将字符串转化为数组
+    var str2='red,pink,blue';
+    console.log(str2.split(','));
+
+    var str3='red#pink#blue';
+    console.log(str3.split('#'));
+
+
+    //转换大写  toUpperCase()
+    //转换小写  toLowerCase()
+</script>
+</body>
+</html>

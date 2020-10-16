@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .nav {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        .nav1 {
+            margin: 10px 0;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .nav2 {
+            margin: 10px 0;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+
+</div>
+<div class="nav1">
+
+</div>
+<div class="nav2">
+
+</div>
+方式一:
+解绑传统的注册事件:
+<script>
+    var nav = document.querySelector('.nav');
+    nav.onclick = function () {
+        alert('这是一个普通传统的注册事件，点击以后会被解绑');
+        nav.onclick = null;
+    }
+</script>
+
+
+方式二:
+解绑添加了事件监听的注册事件:
+<script>
+    var nav1 = document.querySelector('.nav1');
+    nav1.addEventListener('click', fn);
+
+    function fn() {
+        alert('解绑事件');
+        nav1.removeEventListener('click', fn);
+    }
+</script>
+
+方式三:
+解绑传统事件监听的注册事件:
+<script>
+    var nav2 = document.querySelector('.nav2');
+    nav2.attachEvent('onclick', fn1);
+
+    function fn1() {
+        alert('解绑事件');
+        nav1.detachEvent('click', fn1);
+    }
+</script>
+</body>
+</html>

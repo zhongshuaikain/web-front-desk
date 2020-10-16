@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            margin: 10px auto;
+        }
+        div:last-child{
+            margin: 0;
+        }
+
+        .hd {
+            width: 80%;
+            height: 300px;
+            background-color: blueviolet;
+        }
+
+        .banner {
+            width: 80%;
+            height: 400px;
+            background-color: skyblue;
+        }
+
+        .bd {
+            width: 80%;
+            height: 1000px;
+            background-color: #1aff11;
+        }
+
+        .top {
+            position: absolute;
+            top: 320px;
+            left: 1390px;
+            width: 50px;
+            height: 150px;
+            background-color: pink;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .top span {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            margin: 0 5px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<!--pageshow和load页面加载的区别：
+ 两个都是等页面元素完全加载完毕以后在执行内部的函数
+ load是页面加载，但是在火狐浏览器中，利用load页面加载过后，浏览器会保存该页面的缓存，当再次加载时，不会再执行load加载函数，系统会直接调用缓存内的页面元素
+ pageshow 是进入页面，是指只要进入页面就会利用pageshow调用该函数体，并且可以利用e.persisted判断该页面内的元素是否来自缓存，来自缓存返回true否则false-->
+<script>
+    window.addEventListener('pageshow', function (e) {
+        var top = document.querySelector('.top');
+        var span_top = top.querySelector('.span_top');
+        var banner = document.querySelector('.banner');
+        var bannerTop=banner.offsetTop;
+        console.log(bannerTop);
+        document.addEventListener('scroll', function () {
+            // pageYOffset表示页面被卷去的头部距离
+            if (window.pageYOffset < bannerTop) {
+                span_top.style.display = 'none';
+                top.style.position='absolute';
+                top.style.top=bannerTop+'px';
+
+            } else {
+                span_top.style.display = 'block'
+                top.style.position = 'fixed';
+                top.style.top=0+'px';
+            }
+        });
+
+
+    });
+</script>
+
+<div class="hd"> 头部区域</div>
+<div class="banner">banner区域</div>
+<div class="bd">主体区域</div>
+<div class="top">
+    <span class="span_top">返回顶部</span>
+</div>
+
+
+</body>
+</html>

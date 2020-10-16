@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1 {
+            position: relative;
+            left: 0;
+            tep: 0;
+            width: 200px;
+            height: 200px;
+            background-color: #1aff11;
+            margin-bottom: 20px;
+        }
+
+        .div2 {
+            position: relative;
+            left: 0;
+            top: 200px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<button class="btn1000"> 点击btn1000</button>
+<button class="btn500"> 点击btn500</button>
+<div class="div1"></div>
+<div class="div2"></div>
+
+
+<script>
+    var btn1000 = document.querySelector('.btn1000');
+    var btn500 = document.querySelector('.btn500');
+    var div2 = document.querySelector('.div2');
+    var div1 = document.querySelector('.div1');
+
+    function animal(obj, target) {
+        clearInterval(obj.timer);
+        // 给不同对象创建不同的定时器，节省了内存空间的开辟
+        obj.timer = setInterval(function () {
+            // 设置减速运动效果
+            var step = (target - obj.offsetLeft) / 10;
+            if(step>0){
+                step=Math.ceil((target - obj.offsetLeft) / 10);
+            }else{
+                step=Math.floor((target - obj.offsetLeft) / 10);
+            }
+
+            if (obj.offsetLeft == target) {
+                clearInterval(obj.timer);
+            }
+            obj.style.left = obj.offsetLeft + step + 'px';
+        }, 100);
+    }
+
+    btn1000.addEventListener('click', function () {
+        animal(div1, 1000);
+    })
+
+    btn500.addEventListener('click', function () {
+        animal(div1, 500);
+    })
+
+
+</script>
+</body>
+</html>

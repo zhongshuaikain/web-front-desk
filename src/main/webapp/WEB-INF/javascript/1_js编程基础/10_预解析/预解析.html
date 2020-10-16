@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+    /*
+
+    我们把js引擎运行js分为两步：预解析 + 代码执行
+      代码执行
+         从上往下依次执行
+      预解析
+         预解析分为变量预解析（变量提升）和函数预解析（函数提升）
+         变量提升：把所有已经声明的变量提升到当前作用域的最前面，不执行赋值操作
+         函数声明：拔所有已经声明的函数提升到当前作用域的最前面，不调用函数
+
+    */
+
+    // 1问
+    console.log(num);
+    var num = 10;
+    // undefined 操作等价如下：
+    var num;                      //变量提升
+    console.log(num);
+    num = 10;
+
+
+    // 2问
+    fn();
+    function fn() {
+        console.log('成功执行！');
+    }
+    // 成功执行 操作等下如下：
+    function fn() {                //函数提升
+        console.log('成功执行！');
+    }
+    fn();
+
+    // 3问
+    fun();
+    var fun = function () {
+        console.log('执行失败');
+    }
+    // 程序报错 操作等价如下
+    var fun;                       //变量提升
+    fun();
+    fun=function(){
+        console.log('执行失败');
+    }
+
+</script>
+
+
+<body>
+
+</body>
+</html>

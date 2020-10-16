@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<!--
+switch(表达式){
+   case1:value1;
+     break;
+   case2:value2;
+     break;
+   default:value;
+}
+ 开发中 表达式通常写成变量
+ 表达式的值必须与case的值 在数据类型以及值上完全一致才可以匹配成功
+ 每个case后面必须配有一个break
+ 当表达式和所以的case都不匹配的时候，程序默认执行default
+
+ -->
+<script>
+
+    var name=prompt("请输入水果");
+    switch ( name ) {
+        case '苹果':
+            alert(
+                "苹果的价格是3.5元每斤"
+            );
+            break;
+        case '榴莲':
+            alert(
+                "榴莲的价格是35元每斤"
+            );
+            break;
+        default:
+            alert("我的宝贝！没有此水果呢！");
+    }
+
+</script>
+<body>
+
+</body>
+</html>

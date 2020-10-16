@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<input type="text" value="请输入文本内容">
+<script>
+    var put = document.querySelector('input');
+    put.onfocus = function () {
+        if (put.value === '请输入文本内容') {
+            put.value = '';
+            put.style.color = '#666';
+            put.style.outline='none';
+        }
+    }
+    put.onblur = function () {
+        if (put.value === ''){
+            put.value = '请输入文本内容';
+        }
+        put.style.color = '#ccc';
+    }
+
+</script>
+</body>
+</html>

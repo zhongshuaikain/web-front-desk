@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: 300px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<button id="liudehua"> 刘德华</button>
+<button id="zhangxueyou"> 张学友</button>
+<br>
+<img src="../image/刘德华.jpg" alt="" title="刘德华">
+
+
+<script>
+
+    var liu = document.getElementById('liudehua');
+    var zhang = document.querySelector('#zhangxueyou');
+    var getimg = document.querySelector('img');
+
+    zhang.onclick = function () {
+        getimg.src = '../../image/张学友.jpg';
+        getimg.title = '张学友';
+    }
+
+    liu.onclick = function () {
+        getimg.src='../../image/刘德华.jpg';
+        getimg.title='刘德华';
+    }
+
+
+</script>
+
+</body>
+</html>

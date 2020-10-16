@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="2.26_获取2.26.1页面的参数数据.html">
+    <input type="text" name="username" placeholder="请输入您的用户名">
+    <input type="submit" value="提交">
+</form>
+<button>前进</button>
+<script>
+    var forword = document.querySelector('button');
+    forword.addEventListener('click', function () {
+        history.forward();
+        // history.go(1); 相当于前进一个页面
+    });
+</script>
+</body>
+</html>

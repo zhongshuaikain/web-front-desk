@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+    var year = prompt("请输入年份");
+    if (parseFloat(year) % 4 == 0 && year % 10 != 0 || year % 400 == 0) {
+        alert(
+            parseFloat(year) + "是闰年哟！"
+        );
+    } else {
+        alert(parseFloat(year) + "不是闰年呢！");
+    }
+
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<script>
+
+    $(document).ready(function () {
+        $("div").css("color", "red");
+
+        //如果要针对同一组div进行不同的操作，需要用到遍历元素
+        // 1. $(elem).each(function(index,dom){}) 方法遍历数组  用于遍历dom元素
+        var div_color = ["red", "blue", "orange"];
+        var div_bgc = ["blue", "orange", "red"];
+        var sum = 0;
+        $("div").each(function (index, domEle) {
+            //回调函数第一个参数一定是索引号，系统自动编排。 第二个参数是dom元素对象
+            domEle.style.color = div_color[index];
+            $(domEle).css({
+                "backgroundColor": div_bgc[index]
+            })
+            sum = sum + parseFloat($(this).text());
+        })
+        console.log(sum);
+
+
+        //2. $.each( elem , function(key,value){})  用于操作元素，遍历数组或对象
+        var arr = ["hello", "good", "go"];
+        $.each(arr, function (i, value) {
+            console.log("数组索引号第" + i + "个值为" + value);
+        })
+
+        var obj = {
+            name: "andy",
+            age: "18",
+            sayHi: function () {
+                alert('hello');
+            }
+        };
+
+        $.each(obj,function (key,value) {
+            console.log("这个人的"+key+"是"+value);
+        })
+    })
+
+
+</script>
+</body>
+</html>

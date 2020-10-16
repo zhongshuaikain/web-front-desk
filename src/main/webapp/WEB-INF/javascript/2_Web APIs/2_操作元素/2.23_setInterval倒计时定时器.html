@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .nav {
+            margin: 200px 0 !important;
+            text-align: center;
+            line-height: 30px;
+
+        }
+
+        .nav div:nth-child(n) {
+            float: left;
+            width: 30px;
+            height: 30px;
+            background-color: #666;
+            margin: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<!--利用setInterval定时器制作倒计时案例-->
+<div class="nav">
+    <div class="h"></div>
+    <div class="m"></div>
+    <div class="s"></div>
+</div>
+
+
+<script>
+
+    var h=document.querySelector('.h');
+    var m=document.querySelector('.m');
+    var s=document.querySelector('.s');
+    var futime = +new Date('2020-05-15 00:00:00');
+    fn();
+    window.setInterval(fn,1000);
+    function fn() {
+        var nowtime = +new Date();
+        var mytime = (futime - nowtime) / 1000;
+        var hour = parseInt(mytime / 60 / 60 % 24);
+        hour = hour < 10 ? '0' + hour : hour;
+        h.innerText=hour;
+        var min = parseInt(mytime / 60 % 60);
+        min = min < 10 ? '0' + min : min;
+        m.innerText=min;
+        var second = parseInt(mytime % 60);
+        second = second < 10 ? '0' + second : second;
+        s.innerText=second;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+innerText和innerHTML 都是改变文本区域的文本内容
+innerText不能识别HTML标签 属于非标准的
+innerHTML能识别HTML标签 是w3school标准的
+-->
+
+<div></div>
+<p>111</p>
+<script>
+
+    var div1 = document.querySelector('div');
+    div1.innerText = '今天是2020年<strong>四月八1号</strong>';
+
+    var p1 = document.querySelector('p');
+    p1.innerHTML = '今天是2020年<strong>四月八号</strong>';
+</script>
+
+
+<!--
+innerText和innerHTML 都是可读写的 都能获取元素内的内容
+innerText不能识别HTML标签 所以读取元素时会去除空格和换行
+innerHTML能识别HTML标签  所以读取元素时会保留空格和换行
+-->
+
+<ul>
+    我是文字
+    <span>我另起一行</span>
+</ul>
+
+<script>
+    var ul2=document.querySelector('ul');
+    console.log(ul2.innerText);
+    console.log(ul2.innerHTML);
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

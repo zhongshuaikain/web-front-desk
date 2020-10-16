@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+    // arguments 的使用，他用来存储用户传递到函数中的所有实参
+    /*
+    伪数组，并不是真正意义上的数组
+    按照索引的方式进行存储
+    没有真正数组的一些方法pop() push()等等
+    */
+
+    function f() {
+        console.log(arguments, arguments.length, arguments[3]);
+        alert(arguments.length);
+        alert(arguments[1]);
+     //argument伪数组的遍历方式和数组遍历一致
+        for (var i = 0; i < arguments.length; i++) {
+            console.log('数组的第' + (i + 1) + '个值是：' + arguments[i]);
+        }
+    }
+    f(1, 2, 111, 22)
+
+
+
+
+</script>
+<body>
+
+</body>
+</html>

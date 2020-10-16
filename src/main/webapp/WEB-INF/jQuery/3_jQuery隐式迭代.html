@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        div {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<script>
+
+    // 获取四个div元素
+    var div = $('div');
+    console.dir(div);
+
+    //给四个div是设置背景颜色为粉色
+    //jQuery对象设置样式不同于DOM对象，他的格式是 jQuery.css('属性名','属性值')
+    $('div').css('background','pink');
+
+    //隐式迭代是把匹配到的所有元素自动内部循环遍历，让每个元素执行相应的方法
+</script>
+
+</body>
+</html>

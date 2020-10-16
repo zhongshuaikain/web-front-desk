@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>
+    dianji
+</button>
+
+<div></div>
+<script>
+    var btn = document.querySelector('button');
+    btn.addEventListener('click', function () {
+        setInterval(function () {
+            location.href = 'http://www.baidu.com';
+        }, 5000);
+    });
+
+    var timer = 5;
+    fn();
+    var time=setInterval(fn, 1000);
+    function fn() {
+        var div=document.querySelector('div');
+        if (timer==0){
+            clearInterval(time);
+            location.href='http://www.baidu.com';
+        }else{
+            div.innerHTML='还有'+timer+'秒钟将自动跳转页面';
+            timer--;
+        }
+
+
+    }
+
+</script>
+
+</body>
+</html>

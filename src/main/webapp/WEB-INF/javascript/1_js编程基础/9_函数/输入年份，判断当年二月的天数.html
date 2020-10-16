@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+    //用户输入年份，输出当前年份的二月份天数
+    function goyear() {
+        var year = prompt("请输入您的年份：");
+        if (month(year)) {
+            alert(year + '闰年的2月份有29天');
+        } else {
+            alert(year + '平年的2月份有28天')
+        }
+
+    }
+
+    goyear();
+
+    //判断是否是闰年
+    function month(year) {
+        var flag = false;
+        if (year % 4 == 0 && year % 10 == 0 || year % 400 == 0) {
+            flag = true;
+        }
+        return flag;
+    }
+
+
+</script>
+
+
+<body>
+
+</body>
+</html>

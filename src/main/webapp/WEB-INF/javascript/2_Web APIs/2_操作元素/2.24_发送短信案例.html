@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        input {
+            margin: 0;
+            padding: 0;
+            width: 150px;
+            height: 20px;
+            box-sizing: border-box;
+            outline: none;
+            border: 1px solid #666;
+        }
+
+        .btn {
+            margin: 0;
+            padding: 0 10px;
+            height: 20px;
+            border: 1px solid #666;
+            color: #666;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 5px;
+            font-size: 12px;
+            /*outline: none;*/
+        }
+    </style>
+</head>
+<body>
+
+<input type="text" placeholder="请输入您的验证码">
+<button class="btn">发送</button>
+
+<script>
+    var btn = document.querySelector('.btn');
+    var text = document.querySelector('input');
+
+    btn.addEventListener('click', function () {
+        var time = 3;
+        btn.disabled = true;
+        fn();
+        var timer = setInterval(fn, 1000);
+        function fn() {
+            if (time === 0) {
+                clearInterval(timer);
+                btn.disabled = false;
+                btn.innerHTML = '发送';
+            } else {
+                btn.innerHTML = '还剩' + time + '秒 再次点击';
+                time--;
+            }
+
+        };
+    });
+
+
+</script>
+
+
+</body>
+</html>

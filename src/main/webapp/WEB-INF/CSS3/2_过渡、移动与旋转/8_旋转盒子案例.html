@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div {
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            background-color: #cccccc;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+        }
+
+        div::after {
+            display: block;
+            content: "传媒";
+            text-align: center;
+            line-height: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px solid #ccc;
+            transform-origin: left bottom;
+            transform: rotate(180deg);
+            transition: all 0.3s;
+        }
+
+        div:hover::after {
+            transform: rotate(0deg);
+        }
+
+    </style>
+</head>
+<body>
+
+<div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*动画中的百分比就是动画持续时间的划分*/
+        /*定义动画*/
+        @keyframes move {
+            /* 动画初始状态*/
+            from {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+            }
+            25% {
+                transform: translate(0px, 500px) rotate(180deg) scale(1.1);
+            }
+            50% {
+                transform: translate(1000px, 500px) rotate(360deg) scale(1.2);
+            }
+            75% {
+                transform: translate(1000px, 0px) rotate(180deg) scale(1.3);
+            }
+            /* 动画结束状态*/
+            to {
+                transform: translate(0px, 0px) rotate(0deg) scale(1);
+            }
+
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+
+            /* 调用动画 */
+            animation-name: move;
+            /* 动画持续时间 */
+            animation-duration: 3s;
+            /*动画的运动状态  steps()指定了函数中的间隔数量（步长）*/
+            animation-timing-function: linear;
+            /* 动画开始的时间 */
+            animation-delay: 2s;
+
+            /*动画被播放的重复次数 默认1*/
+            /*animation-iteration-count: infinite;*/
+            /*动画是否反方向播放 默认normal*/
+            /*animation-direction: alternate;*/
+
+            /*动画结束后的状态 默认是回到起始状态 backwards*/
+            animation-fill-mode: forwards;
+        }
+
+
+
+        /*
+        简写：
+        animation: move 2s linear 0s infinite alternate forwards;
+        */
+
+        div:hover{
+            /* 鼠标经过动画时候，动画停止。默认是经过也不会停止的效果running */
+            animation-play-state: paused;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<div>
+
+</div>
+</body>
+</html>

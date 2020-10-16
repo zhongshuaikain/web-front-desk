@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    /*
+    构造函数创建对象的格式
+     function 构造函数名() {
+        this.属性 = 值;
+        this.方法 = function () {
+        }
+    }
+    调用构造函数必须使用new：
+    new 构造函数名();
+
+    new关键字在执行时会做的四件事
+    1.在内存中创建一个对象
+    2.让构造函数中的this指向这个对象
+    3.将构造函数中的属性和方法传给新建的空对象
+    4.将值返回给这个对象
+
+     */
+
+    //构造函数名字首字母大写,不需要return就能返回结果
+    function Start(name1,age1,sex1) {
+        this.name=name1;
+        this.age=age1;
+        this.sex=sex1;
+        this.sing=function (song) {
+            console.log(song);
+        }
+    }
+
+    var ldh=new Start('刘德华', 58, '男');
+    console.log(ldh.name);
+    console.log(ldh['age']);
+    ldh.sing('冰雨');
+
+
+</script>
+
+<body>
+
+</body>
+</html>

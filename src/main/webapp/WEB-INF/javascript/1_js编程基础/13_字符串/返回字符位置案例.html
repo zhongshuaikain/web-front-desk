@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    // 查找字符串 "abcoefoxyozzopp" 中所有o出现的位置以及次数
+
+
+    var str = 'abcoefoxyozzopp';
+    var num=0;
+    var index = str.indexOf('o');
+    while (index !== -1) {
+        num+=1;
+        console.log(index);
+        index = str.indexOf('o', index+1);
+    }
+    console.log('o出现的次数是'+num+'次');
+
+
+
+
+
+</script>
+
+</body>
+</html>

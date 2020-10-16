@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father {
+            /*解决塌陷三个方式*/
+            /*border-top: 1px solid transparent;*/
+            /* padding-top: 1px;*/
+            /* overflow: hidden;*/
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .son {
+
+            margin: 100px auto;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+dom事件流一共分为捕获阶段、当前目标阶段、冒泡阶段三个阶段
+js中只能执行捕获阶段或者冒泡阶段其中之一，不能同时执行
+onclick和attachEvent(ie)只能得到冒泡阶段
+
+<div class="father">
+    <div class="son">
+
+    </div>
+</div>
+
+<script>
+    var father = document.querySelector('.father');
+    var son = document.querySelector('.son');
+
+    // 第三个参数为false,默认会采取冒泡阶段进行获取，先获取子盒子，再去父盒子，再去body，再去HTML,再去document查找事件
+    // 第三个参数为true,默认会采取捕获阶段进行获取，先获去document查找事件,再去HTML,再去body，再去父盒子，再去子盒子
+    // 实际开发中，很少采用事件捕获（从最高往最低）,一般更关注事件冒泡。注意 onfocus,onblur,onmouseenter,onmouseleave没有冒泡阶段
+    father.addEventListener('click', function (e) {
+        alert('这是父盒弹窗');
+        // e.stopPropagation();阻止事件冒泡
+    }, false);
+    son.addEventListener('click', function () {
+        alert('这是子盒弹窗');
+    }, false);
+
+    document.addEventListener('click', function () {
+        alert("这是document弹窗")
+    },false);
+
+
+</script>
+
+</body>
+</html>

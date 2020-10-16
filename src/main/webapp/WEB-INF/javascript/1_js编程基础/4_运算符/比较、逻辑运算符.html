@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    //判断数值是否相等==  判断数值、数据类型等是否全等===
+    console.log(10 == '10');//true
+    console.log(10 === '10');//false
+
+    //num=mum+2 就是 mun+=2;    num = mum % 2;就是  num %= 2
+
+    //布尔值参与的逻辑运算符(逻辑与的优先级比逻辑或高)
+    console.log(3 > 5 && 3 > 2);
+    console.log(3 > 5 || 3 > 2);
+
+    //值或表达式参与的逻辑运算
+    // 逻辑与的短路运算;
+    /* 如：表达式1&&表达式2
+    如果表达式1为真则返回表达式2，如果表达式1为假，则直接返回表达式1
+    如果有空的或者否定的为假，0、''、NaN、undefined、null为假 其余都是真的  */
+    console.log(123 && 456);//返回表达式2
+    console.log('' && (11 + 12));//返回表达式1
+
+    // 逻辑或的短路运算;
+    /* 如：表达式1 || 表达式2
+    如果表达式1为真则返回表达式1，如果表达式1为假，则直接返回表达式2
+     */
+    var num=0;
+    console.log(123||num++);
+    console.log(num);
+</script>
+<body>
+
+</body>
+</html>

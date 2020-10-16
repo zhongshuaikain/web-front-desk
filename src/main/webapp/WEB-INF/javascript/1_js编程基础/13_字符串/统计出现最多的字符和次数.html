@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var str = 'abcorfoxyozzopp';
+    var o= {};
+
+    for (var i=0;i<str.length;i++){
+        if (o[str.charAt(i)]){
+            o[str.charAt(i)]++;
+        }else{
+            o[str.charAt(i)]=1;
+        }
+    }
+    console.log(o);
+    var max=0;
+    var ch;
+    for (var key in o){
+        if(o[key]>max){
+            max=o[key];
+            ch=key;
+        }
+    }
+    console.log(max);
+    console.log('做多出现的字符是'+ch);
+
+
+
+</script>
+
+</body>
+</html>

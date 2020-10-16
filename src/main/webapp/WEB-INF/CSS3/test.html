@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #333;;
+        }
+
+        .map {
+            position: relative;
+            width: 747px;
+            height: 617px;
+            margin: 100px auto;
+            background: url(3_动画/images/map.png) no-repeat;
+        }
+
+        .map .dotted {
+            position: absolute;
+            top: 228px;
+            right: 193px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: skyblue;
+        }
+
+        .map div[class*="pause"]{
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            box-shadow: 0 0 7px skyblue;
+            animation: pluse 1.2s;
+        }
+
+        @keyframes pluse {
+            from{
+
+            }
+            70%{
+                width: 20px;
+                height: 20px;
+                opacity: 1;
+            }
+            100%{
+                width: 40px;
+                height: 40px;
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="map">
+    <div class="dotted"></div>
+    <div class="pause1"></div>
+    <div class="pause2"></div>
+    <div class="pause3"></div>
+</div>
+</body>
+</html>

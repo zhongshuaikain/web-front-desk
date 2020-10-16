@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+
+    function answer(max,min) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    for (var i = 1; i <= 4; i++) {
+        if (i <= 3) {
+            var num = prompt('请输入一个数字：');
+            if (num > answer(1,10)) {
+                alert('你猜大啦！');
+            } else if (num < answer(1,10)) {
+                alert('你猜小啦！');
+            } else {
+                alert('你猜对啦！');
+                break;
+            }
+
+        }else {
+            alert('你的次数不足！游戏终止！');
+            break;
+        }
+    }
+
+
+</script>
+<body>
+</body>
+</html>

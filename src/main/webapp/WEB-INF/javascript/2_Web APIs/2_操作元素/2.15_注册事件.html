@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .nav {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .nav2 {
+            margin: 20px 0;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    传统的事件绑定，采用on开头
+</div>
+<div class="nav2">
+    采用添加事件监听器绑定
+</div>
+
+<div class="nav2">
+    采用传统的方式进行事件注册
+</div>
+注册事件两种方式
+
+方式一：
+普通事件绑定，采用on开头
+<script>
+    var nav = document.querySelector('.nav');
+    nav.onclick = function () {
+        alert('=====');
+    }
+    nav.onclick = function () {
+        alert('普通的注册事件具备层叠性，后面的覆盖前面的事件');
+    }
+</script>
+
+方式二:
+采用添加事件监听器绑定
+<script>
+    var nav2 = document.querySelector('.nav2');
+    nav2.addEventListener('click', function () {
+        alert('这是采用事件监听器绑定的事件');
+    });
+    nav2.addEventListener('click', function () {
+        alert('事件监听器绑定的事件，不会有层叠性，会依次执行');
+    });
+</script>
+
+方式三:
+采用传统的方式进行事件注册，只兼容ie9以下浏览器
+<script>
+    var nav3 = document.querySelector('.nav3');
+    nav3.attachEvent('onclick', function () {
+        alert("采用传统的方式进行事件注册");
+    })
+</script>
+</body>
+</html>

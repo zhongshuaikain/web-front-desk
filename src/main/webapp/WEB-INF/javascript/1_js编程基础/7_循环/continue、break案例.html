@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+    //只要出现continue 就退出本次（当前次）的循环，继续执行剩余次的循环
+
+    //求1-100之间，除了能被7整除之外的整数和
+
+    var sum = 0;
+    var figure = prompt("请输入你想求和的最大范围");
+    for (var i = 1; i <= figure; i++) {
+        if (i % 7 == 0) {
+            continue;
+        }
+        sum = sum + i;
+    }
+    alert(sum);
+
+
+    //break关键字用于立即结束循环
+    for(var j=1;j<=5;j++){
+        if(i=3){
+            break;
+        }
+        console.log('我正在吃第'+j+'个包子')
+
+    }
+</script>
+
+<body>
+
+</body>
+</html>

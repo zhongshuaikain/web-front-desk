@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    /*
+      字符串转义字符用反斜杠 \ 表示
+      \n 表示换行
+      \t 表示缩进
+      \b 表示空格
+     */
+    console.log('沙漠' + '骆驼');
+    //字符串和数字拼接，结果是字符串类型
+    console.log('12' + 12);
+
+    //布尔型在参与数学运算中true当作1来看，false当作0来看
+    console.log(true + 1);//结果是2
+
+    //如果变量声明未赋值，输出就是undefined 为定义数据类型
+    var str;
+    console.log(str);
+
+    // undefined+数字=NaN
+    // undefined+字符串=undefined字符串
+    // null+数字=原有的数字
+    // null+字符串=null字符串
+
+    console.log(Boolean('')); //false
+    console.log(Boolean(0)); //false
+    console.log(Boolean(NaN));// false
+    console.log(Boolean(null));//false
+    console.log(Boolean(undefined));//false
+    console.log(Boolean('/B'));//true
+    console.log(Boolean(12));//true
+
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+.nav1{
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+}
+    </style>
+</head>
+<body>
+<div class="nav1">
+
+</div>
+
+
+事件对象写在侦听函数的小括号中，类似于形参，由系统自动创建，不需要传参
+事件对象的命名：event、evt、e
+事件对象的兼容性问题在ie678中通过 window.event 来进行获取，兼容性写法event=event||window.event;
+
+<script>
+    var nav1=document.querySelector('.nav1');
+    nav1.onclick = function (e) {
+        e=e||window.event;
+        console.log(e);
+    }
+</script>
+
+</body>
+</html>

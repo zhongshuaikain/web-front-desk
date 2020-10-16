@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<!--
+    改变样式属性的两个方法
+        element.style 行内样式操作
+        element.className 类名样式操作
+
+    点击div盒子以后，div的样式会变成蓝色
+-->
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+
+
+</style>
+<body>
+
+<div>
+
+
+</div>
+<script>
+
+    var getDiv = document.querySelector('div');
+    getDiv.onclick = function () {
+        getDiv.style.backgroundColor='blue';
+    }
+
+</script>
+
+</body>
+</html>

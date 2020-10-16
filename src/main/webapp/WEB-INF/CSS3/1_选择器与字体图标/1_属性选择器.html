@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{
+            cursor: pointer;
+        }
+
+        /* 含有disabled属性的标签选中*/
+        button[disabled]{
+            cursor: default;
+        }
+
+        /* 含有type属性中的search属性的样式选中*/
+        input[type="search"]{
+            color: #00b4ff;
+        }
+        /* 以incon开头的选中*/
+        div[class^="incon"]{
+        color: red;
+        }
+
+        /* 以n4结尾的选中*/
+        div[class$="n4"]{
+            color: #FF8500;
+        }
+
+        /* 凡是含有a的选中 */
+        div[class*="a"]{
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+
+<button>按钮1</button>
+<button disabled="disabled">按钮2</button>
+<button disabled="disabled" >按钮3</button>
+<button>按钮4</button>
+
+<input type="text" value="请输入文本">
+<input type="text" value="请输入文本">
+<input type="text" value="请输入文本">
+<input type="search" value="请输入文本">
+<input type="search" value="请输入文本">
+<input type="search" value="请输入文本">
+
+<div class="incon1">图标1</div>
+<div class="incon2">图标2</div>
+<div class="incaon3">图标3</div>
+<div class="incon4">图标4</div>
+<div class="aincon5">图标5</div>
+
+</body>
+</html>

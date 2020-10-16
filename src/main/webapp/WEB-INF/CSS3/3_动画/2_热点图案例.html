@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #333;;
+        }
+
+        .map {
+            position: relative;
+            width: 747px;
+            height: 617px;
+            margin: 100px auto;
+            background: url(images/map.png) no-repeat;
+        }
+
+        .city {
+            position: absolute;
+            top: 228px;
+            right: 193px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+
+        }
+
+         .dotted {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: skyblue;
+        }
+
+        .city div[class*="pause"] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            box-shadow: 0 0 12px skyblue;
+            border-radius: 50%;
+            animation: pulse 1.2s linear infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+
+            }
+            70% {
+                width: 40px;
+                height: 40px;
+                opacity: 1;
+            }
+            100% {
+                width: 70px;
+                height: 70px;
+                opacity: 0;
+            }
+
+
+        }
+
+        .map .city div.pause2 {
+            animation-delay: 0.4s;
+        }
+        .pause3{
+            animation-delay: 0.8s!important;
+        }
+
+        .taibei{
+            position: absolute;
+            top: 499px;
+            right: 80px;
+        }
+    </style>
+</head>
+<body>
+<div class="map">
+    <div class="city">
+        <div class="dotted"></div>
+        <div class="pause1"></div>
+        <div class="pause2"></div>
+        <div class="pause3"></div>
+    </div>
+    <div class="city taibei">
+        <div class="dotted"></div>
+        <div class="pause1"></div>
+        <div class="pause2"></div>
+        <div class="pause3"></div>
+    </div>
+</div>
+</body>
+</html>
+

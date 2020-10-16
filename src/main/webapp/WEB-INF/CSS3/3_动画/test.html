@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        .map{
+            position: relative;
+            margin: 100px auto;
+            width: 747px;
+            height: 617px;
+            background: url(images/map.png) no-repeat;
+        }
+
+        .city{
+            position: absolute;
+            top: 229px;
+            right: 193px;
+            width: 7px;
+            height: 7px;
+        }
+
+        .dotted{
+            width: 7px;
+            height: 7px;
+            background-color: skyblue;
+            border-radius: 50%;
+        }
+
+        [class^="p"]{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            width: 7px;
+            height: 7px;
+            box-shadow: 0 0 7px skyblue;
+            animation: pulse 1.2s linear infinite;
+        }
+
+        @keyframes pulse {
+            from{}
+            70%{
+                width: 15px;
+                height: 15px;
+                opacity: 1;
+
+            }
+            to{
+                width: 40px;
+                height: 40px;
+                opacity: 0;
+            }
+
+        }
+
+        .p2{
+            animation-delay: 0.4s;
+        }
+        .p3{
+            animation-delay: 0.8s;
+        }
+        .taibei{
+            position: absolute;
+            top: 499px;
+            right: 80px;
+        }
+    </style>
+</head>
+<body>
+<div class="map">
+    <div class="city">
+        <div class="dotted"></div>
+        <div class="p1"></div>
+        <div class="p2"></div>
+        <div class="p3"></div>
+    </div>
+    <div class="city taibei">
+        <div class="dotted"></div>
+        <div class="p1"></div>
+        <div class="p2"></div>
+        <div class="p3"></div>
+    </div>
+</div>
+
+</body>
+</html>

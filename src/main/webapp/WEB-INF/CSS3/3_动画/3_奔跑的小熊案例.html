@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>running bear</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: skyblue;
+        }
+
+        .bear {
+            position: absolute;
+            top: 840px;
+            width: 200px;
+            height: 100px;
+            background: url(images/bear.png);
+            animation: bear 1s steps(8) infinite, move 3s linear forwards;
+        }
+
+        @keyframes bear {
+            from {
+                background-padding: 0 0;
+            }
+            to {
+                background-position: -1600px 0;
+            }
+        }
+
+        @keyframes move {
+            from {
+                left: 0;
+
+            }
+            to {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .bgc {
+            position: absolute;
+            top: 635px;
+            width: 3840px;
+            height: 336px;
+            background: url(images/bg1.png);
+            animation: bgc 80s linear infinite ;
+        }
+
+        @keyframes bgc {
+            0% {
+
+            }
+            100% {
+                background-position: -3840px 0;
+            }
+        }
+
+        .bgc2 {
+            position: relative;
+            left: 0;
+            bottom: -471px;
+            width: 3840px;
+            height: 569px;
+            background: url(images/bg2.png);
+            animation: bg2 80s linear infinite forwards;
+        }
+
+        @keyframes bg2 {
+            0% {
+            }
+            100% {
+                background-position: -3840px 0;
+            }
+        }
+
+        .name {
+            position: absolute;
+            overflow: hidden;
+            width: 0;
+            height: 40px;
+            line-height: 40px;
+            font-size: 40px;
+            color: #fff;
+            white-space: nowrap;
+            background: transparent;
+            transform: translate(800px,0);
+            animation: name 3s steps(6) forwards infinite;
+        }
+
+        @keyframes name {
+            0% {
+
+            }
+            100% {
+
+                width: 240px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bgc2">
+
+</div>
+
+<div class="bgc">
+
+</div>
+<div class="bear"></div>
+<div class="name">
+    奔跑的小熊
+</div>
+</body>
+</html>

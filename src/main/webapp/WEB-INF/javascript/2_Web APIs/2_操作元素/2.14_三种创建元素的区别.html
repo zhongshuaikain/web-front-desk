@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="inner"></div>
+<div class="create"></div>
+
+<script>
+    // 方法一:
+        document.write();
+    // 如果页面文档流加载完毕以后，会导致页面重绘
+
+    // 方法二:
+    //innerHTML 创建多个元素时，效率更高，前提是不要采取拼接字符串的方式，而要采取数组的形式拼接，结构稍微复杂一些
+    var inner=document.querySelector('.inner');
+    inner.innerHTML="<a href='javascript:;'></a>";
+
+    // 方法三
+    // 创建时间会比方法二中的拼接字符串方式效率更高，结构稍微清晰一些
+    var create=document.querySelector('.create');
+    var a=document.createElement('a');
+    create.appendChild(a);
+
+</script>
+
+
+</body>
+</html>

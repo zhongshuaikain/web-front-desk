@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+
+            margin: 100px auto;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+            border-spacing: 0;
+            width: 300px;
+            text-align: center;
+        }
+
+        td, th {
+            border: 1px solid #ccc;
+            padding: 10px;
+            color: #404060;
+        }
+
+        th {
+            background-color: skyblue;
+        }
+
+        tr {
+            cursor: pointer;
+        }
+
+
+        .bg {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <caption>商品价格表</caption>
+    <thead>
+    <tr>
+        <th><input class="hd" type="checkbox"></th>
+        <th>商品</th>
+        <th>价钱</th>
+    </tr>
+    </thead>
+    <tbody class="bd">
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>iphone8</td>
+        <td>8000</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>iphonex</td>
+        <td>10000</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>apple watch</td>
+        <td>3000</td>
+    </tr>
+    </tbody>
+
+    <script>
+        var gethd = document.querySelector('.hd');
+        var getcheck = document.querySelector('.bd').querySelectorAll('input');
+        gethd.onclick = function () {
+            for (var i = 0; i < getcheck.length; i++) {
+                getcheck[i].checked = gethd.checked;
+            }
+        }
+
+
+        for (var i = 0; i < getcheck.length; i++) {
+            getcheck[i].onclick = function () {
+                var flag = true;
+                for (var i = 0; i < getcheck.length; i++) {
+                    if (getcheck[i].checked != true) {
+                        flag = false;
+                        break;
+                    }
+                }
+                gethd.checked = flag;
+            }
+        }
+
+        var gettr = document.querySelector('.bd').querySelectorAll('tr');
+        for (var i = 0; i < gettr.length; i++) {
+            gettr[i].onmouseover = function () {
+                this.className = 'bg';
+                // this.style.backgroundColor='pink';
+            }
+            gettr[i].onmouseout = function () {
+                this.className = '';
+            }
+        }
+    </script>
+</table>
+</body>
+</html>

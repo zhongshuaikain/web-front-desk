@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="users">
+<input type="checkbox" id="remember">记住用户名<br/>
+<button class="store">存储数据</button>
+<script>
+    var users = document.querySelector("#users");
+    var remember = document.querySelector("#remember");
+    var store = document.querySelector(".store");
+
+//localStorage 存储即使页面关闭，数据也不会丢失
+    store.addEventListener("click", function () {
+        localStorage.setItem("username", users.value);
+    })
+
+    if (localStorage.getItem("username")) {
+        users.value = localStorage.getItem("username");
+        remember.checked = true;
+    }
+
+
+    remember.addEventListener("change", function () {
+        if (remember.checked) {
+            users.value = localStorage.getItem("username");
+        } else {
+            localStorage.removeItem("username");
+        }
+    })
+
+
+</script>
+
+
+</body>
+</html>

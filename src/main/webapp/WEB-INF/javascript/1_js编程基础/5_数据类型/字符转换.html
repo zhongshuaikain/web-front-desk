@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    // 数字型转字符串
+
+    //1.利用变量.tostring()
+    var num = 10;
+    var str = num.toString();
+    console.log(typeof str);
+    //2.利用String(变量)
+    var num1 = 20;
+    console.log(typeof (String(num1)));
+    //3.利用+拼接字符串  常用方法，属于隐式转换
+    var num2 = 30;
+    console.log(typeof (num2 + ''));
+
+
+    // 转换为数字型（重点）
+
+    //1.parseInt(变量) 可以把字符串转换为数字型 但转换结果为整数
+    var age = prompt('请输入您的年龄');
+    console.log(parseInt(age));
+    console.log(parseInt(3.14));//取整
+    console.log(parseInt('120.14px'));//取整 去掉px
+    console.log(parseInt('rem120ox'));//NaN
+    //2.parseFloat(变量) 可以把字符串转换为数字型 但转换结果为原数字
+    console.log(parseFloat(age));
+    console.log(parseFloat(3.14));
+    console.log(parseFloat('120.14px'));//120.14 去掉px
+    console.log(parseFloat('rem120ox'));//NaN
+    //3.Number(变量)
+    var num3 = '123';
+    console.log(Number(num3));
+    //4.利用算术运算 隐式转换
+    console.log('12'-2);//10
+    console.log('123'-'120');//3
+
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0f0f0f;
+        }
+
+        .father {
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .father > li {
+            float: left;
+        }
+
+        .father > li > a {
+            background-color: orange;
+        }
+
+        .father > li a {
+            display: block;
+            width: 100px;
+            height: 40px;
+        }
+
+        .father ul {
+            display: none;
+        }
+
+        .father ul li {
+            width: 100px;
+            height: 40px;
+            box-sizing: border-box;
+            border: 1px solid orange;
+            border-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<ul class="father">
+    <li>
+        <a href="javascript:;">微博</a>
+        <ul>
+            <li><a href="#">私信</a></li>
+            <li><a href="#">评论</a></li>
+            <li><a href="#">@我</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;">微博</a>
+        <ul>
+            <li><a href="#">私信</a></li>
+            <li><a href="#">评论</a></li>
+            <li><a href="#">@我</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;">微博</a>
+        <ul>
+            <li><a href="#">私信</a></li>
+            <li><a href="#">评论</a></li>
+            <li><a href="#">@我</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;">微博</a>
+        <ul class="son">
+            <li><a href="#">私信</a></li>
+            <li><a href="#">评论</a></li>
+            <li><a href="#">@我</a></li>
+        </ul>
+    </li>
+</ul>
+
+
+<script>
+    $(document).ready(function () {
+        //方法一
+        // $(".father>li").mousemove(function () {
+        //     $(this).children('ul').stop().slideDown(200 ,'linear');
+        // })
+        //
+        // $(".father>li").mouseout(function () {
+        //     $(this).children('ul').stop().slideUp(200,'linear');
+        // })
+
+        //方法二
+        $(".father>li").hover(function () {
+            $(this).children('ul').stop().slideToggle(200,'linear');
+        })
+
+
+        //方法三
+        // $(".father>li").hover(function () {
+        //     $(this).children('ul').stop().slideDown(200,'linear');
+        // },function () {
+        //     $(this).children('ul').stop().slideUp(200,'linear');
+        // })
+
+
+        $(".father>li ul li").mouseenter(function () {
+            //设置多个样式 css( { "属性名":"属性值","属性名":"属性值"} );
+            $(this).css({
+                    background: 'orange',
+                    opacity: 0.5
+                }
+            );
+
+            //排他思想
+            $(this).siblings().css(
+                {
+                    background: '',
+                    opacity: ''
+                }
+            );
+        })
+
+    })
+</script>
+</body>
+
+</html>

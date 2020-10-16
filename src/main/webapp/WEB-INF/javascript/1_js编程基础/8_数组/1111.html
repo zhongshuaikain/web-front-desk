@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var money = 200;
+    while (true) {
+        var strAction = prompt("请输入操作项目的序号: \n 1.存款\n 2.取款\n 3.查询余额\n 4.退出");
+        action = parseInt(strAction);
+        switch (action) {
+            case 1:
+                var strMoney_cun = prompt("请输入要存的金额");
+                money = money + parseInt(strMoney_cun);
+                alert("您的卡内余额是" + money);
+                break;
+            case 2:
+                var strMoney_qu = prompt("请输入要取的金额");
+                var Money_qu = parseInt(strMoney_qu);
+                if (Money_qu > money) {
+                    alert("余额不足，请重新输入！");
+                } else {
+                    money = money - parseInt(strMoney_qu);
+                    alert("您的卡内余额是" + money);
+                }
+                break;
+            case 3:
+                alert("您的卡内余额是" + money);
+                break;
+            case 4:
+                alert("您已退出！");
+                break;
+            default:
+                alert("您输入的内容不正确，请重新输入！");
+                break;
+        }
+    }
+
+</script>
+</body>
+</html>

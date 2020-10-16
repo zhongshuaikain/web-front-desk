@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .all {
+            position: relative;
+            top: 350px;
+            left: 300px;
+            width: 100%;
+            height: 300px;
+
+        }
+
+        .bg {
+            width: 1920px;
+            height: 786px;
+            background: url(images/bg.jpg) no-repeat;
+            animation: bg 5s linear infinite alternate;
+        }
+
+        @keyframes bg {
+            from {
+            }
+            to {
+                background-position-x: -120px;
+            }
+        }
+
+        .wukong_bajie {
+            position: absolute;
+            bottom: 0;
+        }
+
+
+        @keyframes wukong_bajie {
+            from {
+            }
+            to {
+                background-position-x: -1800px;
+            }
+        }
+
+        .wukong {
+            left: 0;
+            width: 200px;
+            height: 180px;
+            background: url(images/1.png);
+            animation: wukong_bajie 1s steps(9) infinite;
+        }
+
+        .tangsen {
+            position: absolute;
+            left: 200px;
+            bottom: 0;
+            left: 200px;
+            width: 170px;
+            height: 240px;
+            background: url(images/3.png);
+            animation: tangsen 1s steps(8) infinite;
+        }
+
+        @keyframes tangsen {
+            from {
+            }
+            to {
+                background-position-x: -1360px;
+            }
+        }
+
+        .bajie {
+            left: 400px;
+            width: 200px;
+            height: 180px;
+            background: url(images/2.png);
+            animation: wukong_bajie 1s steps(9) infinite;
+        }
+
+        .shasen {
+            position: absolute;
+            left: 200px;
+            bottom: 0;
+            left: 600px;
+            width: 210px;
+            height: 200px;
+            background: url(images/4.png);
+            animation: shasen 1s steps(8) infinite;
+        }
+
+        @keyframes shasen {
+            from {
+            }
+            to {
+                background-position-x: -1680px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="bg">
+    <div class="all">
+        <div class="wukong_bajie wukong"></div>
+        <div class="tangsen"></div>
+        <div class="wukong_bajie bajie"></div>
+        <div class="shasen"></div>
+    </div>
+
+</div>
+
+</body>
+</html>

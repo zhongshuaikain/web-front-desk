@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--BOM属于浏览器模型-->
+
+<!--
+普通的js事件要执行必须要在<script>标签前面有相应的事件可以调用，但是有时候我们需要把<script>放在
+代码中的任何位置，依然可以使我们的程序成功运行，为了满足这一个需求，我们采用一些方法将页面内的元素执
+行完毕以后在进行方法调用和执行
+-->
+
+<script>
+    // 方法一 传统的页面加载完毕后执行
+    window.onload = function () {
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            alert('传统的页面加载');
+        });
+    }
+
+    window.onload = function () {
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            alert('覆盖传统的页面加载');
+        });
+    }
+
+    //方法二 采用事件监听器加载完毕后执行
+    // load 要等页面所有元素加载完毕就会执行，需要等图片 falsh css加载完毕后才执行，运行速度比DOMContentLoaded慢
+    window.addEventListener('load', function () {
+        alert('这是一个绑定的事件');
+    });
+
+    window.addEventListener('load', function () {
+        alert('不会覆盖前一个绑定的事件');
+    });
+
+    //方式三：DOMContentLoaded 只要dom加载完毕就会执行，不需要等图片 falsh css加载完毕后执行，运行速度最快
+    document.addEventListener('DOMContentLoaded', function () {
+        alert('33');
+    })
+
+</script>
+
+<button>点击按钮</button>
+
+</body>
+</html>

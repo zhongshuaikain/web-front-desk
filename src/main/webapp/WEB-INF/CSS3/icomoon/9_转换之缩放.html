@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+<!--
+transform: scale(X,Y);的优势：可以设置缩放中心点，自身的缩放，不会影响其他盒子的高度
+
+宽高等比缩放三倍
+transform: scale(3,3);
+
+宽高等比缩小两倍
+transform: scale(0。5,0.5);
+-->
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin: 200px auto;
+            transform-origin: left bottom;
+        }
+
+        div:hover{
+            transform: scale(3,3);
+        }
+    </style>
+</head>
+<body>
+
+<div>
+
+</div>
+本行文字不会被div盒子的缩放影响
+</body>
+</html>

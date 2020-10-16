@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+
+//    方法一
+//    var array = [4, 2, 9, 3, 5, 1];
+//    var temp;
+//    for (var i = 0; i < array.length; i++) {//元素个数
+//
+//        for (var j = i + 1; j < array.length; j++) {//第几个元素开始，与后面的元素做比较
+//            if (array[i] > array[j]) {
+//                temp = array[i];
+//                array[i] = array[j];
+//                array[j] = temp;
+//            }
+//        }
+//    }
+//    alert(array);
+
+    // 方法二
+    // var array = [5, 4, 2, 9, 3, 1];
+    // var temp;
+    // for (var i = 0; i <= array.length; i++) {// 外层循环管趟数
+    //
+    //     for (var j = 0; j <= array.length - i - 1; j++) {    //内层循环管次数，元素个数-次数-1；
+    //         if (array[j] > array[j+1]) {
+    //             temp = array[j];
+    //             array[j] = array[j+1];
+    //             array[j+1] = temp;
+    //         }
+    //     }
+    // }
+    // alert(array);
+
+
+    // 方法三
+    var array3=[3,63,2,6,44,7,22];
+    array3.sort(  function (a,b) {
+        return a-b;//a-b 升序排列   b-a降序排列
+    });
+    console.log(array3);
+</script>
+
+<body>
+
+</body>
+</html>

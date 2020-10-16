@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        div{
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<script>
+
+    //挑选出第二个div把他的样式改为天蓝色
+
+
+    //方法一：  //挑选出第二个div把他的样式改为天蓝色
+
+    $('div').eq(1).css('background','skyblue');
+    //方法二：  //挑选出第三个div把他的样式改为红色
+    $("div:eq(2)").css('background','red');
+
+
+</script>
+
+</body>
+</html>

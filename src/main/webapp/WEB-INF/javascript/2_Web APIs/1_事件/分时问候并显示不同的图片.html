@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    img {
+        width: 300px;
+    }
+
+
+</style>
+<body>
+
+<div> 早上好！</div>
+<img src="../image/早上好.jpg"/>
+<script>
+    var getDiv = document.querySelector('div');
+    var getImg = document.querySelector('img');
+    var date = new Date();
+    var hours = date.getHours();
+
+    if (hours<12){
+        getImg.src='../image/早上好.jpg';
+        getDiv.innerHTML='早上好.!'  ;
+    }else if(hours<18){
+        getImg.src='../image/下午好.gif';
+        getDiv.innerHTML='下午好!';
+    }else {
+        getImg.src='../image/晚上好.gif';
+        getDiv.innerHTML='晚上好!';
+    }
+</script>
+
+
+</body>
+
+</html>

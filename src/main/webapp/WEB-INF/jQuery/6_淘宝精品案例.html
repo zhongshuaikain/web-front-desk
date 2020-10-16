@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #101010;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            margin: 200px auto;
+            height: 250px;
+            width: 250px;
+            font-size: 12px;
+            text-align: center;
+            background-color: pink;
+            border: 1px solid hotpink;
+            border-bottom: 0;
+        }
+
+        .box ul {
+            float: left;
+            width: 50px;
+            height: 250px;
+            background-color: pink;
+        }
+
+        .box ul li {
+            width: 50px;
+            height: 25px;
+            line-height: 25px;
+            border-right: 1px solid hotpink;
+            border-bottom: 1px solid hotpink;
+            box-sizing: border-box;
+        }
+
+        .box .icon {
+            overflow: hidden;
+            float: left;
+            width: 200px;
+            height: 250px;
+            background-color: #1aff11;
+            box-sizing: border-box;
+            border-bottom: 1px solid hotpink;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <ul>
+        <li><a href="#">女靴</a></li>
+        <li><a href="#">雪地靴</a></li>
+        <li><a href="#">冬裙</a></li>
+        <li><a href="#">毛大衣</a></li>
+        <li><a href="#">毛衣</a></li>
+        <li><a href="#">棉裤</a></li>
+        <li><a href="#">棉裤</a></li>
+        <li><a href="#">羽绒服</a></li>
+        <li><a href="#">牛仔裤</a></li>
+        <li><a href="#">登山鞋</a></li>
+    </ul>
+
+    <div class="icon">
+        <div>
+            <a href="javascript:;">
+                <img src="images/女靴.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="javascript:;">
+                <img src="images/雪地靴.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="javascript:;">
+                <img src="images/冬裙.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="javascript:;">
+                <img src="images/呢大衣.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="javascript:;">
+                <img src="images/毛衣.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="javascript:;">
+                <img src="images/棉服.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="javascript:;">
+                <img src="images/女裤.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="javascript:;">
+                <img src="images/羽绒服.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="javascript:;">
+                <img src="images/牛仔裤.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <a href="javascript:;">
+                <img src="images/登山鞋.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $('.box ul li').click(function () {
+            var index=$(this).index();
+            $('.icon div').eq(index).show();
+            $('.icon div').eq(index).siblings().hide();
+        });
+
+    })
+
+
+</script>
+</body>
+</html>

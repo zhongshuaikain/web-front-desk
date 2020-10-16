@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+用户名<input class="txt" type="text" name="username"><br/>
+密码<input class="pass" type="password" name="password">
+<button class="sto">存储数据</button>
+<button class="gets">获取数据</button>
+<button class="remove">删除数据</button>
+<button class="clears">清空数据</button>
+
+<!--临时存储  浏览器关闭之后 数据也将会被清空-->
+<script>
+    var sto = document.querySelector(".sto");
+    var txt = document.querySelector(".txt");
+    var pass = document.querySelector(".pass");
+    sto.addEventListener("click", function () {
+        sessionStorage.setItem("username", txt.value);
+        sessionStorage.setItem("password", pass.value);
+    });
+
+    var gets = document.querySelector(".gets");
+    gets.addEventListener("click", function () {
+        txt.value = sessionStorage.getItem("username");
+        pass.value = sessionStorage.getItem("password");
+    })
+
+    var remove = document.querySelector(".remove");
+    remove.addEventListener("click", function () {
+        sessionStorage.removeItem("username");
+    })
+
+    var clears = document.querySelector(".clears");
+    clears.addEventListener("click", function () {
+        sessionStorage.clear();
+    })
+
+</script>
+
+</body>
+</html>

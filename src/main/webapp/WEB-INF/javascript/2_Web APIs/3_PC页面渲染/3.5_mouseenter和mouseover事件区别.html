@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+mouseenter事件和mouseover
+mouseover 鼠标经过自身盒子触发，经过子盒子也会触发，有冒泡事件（经过子盒子向上冒泡到父盒子）
+mouseenter 只有经过自身盒子会触发，经过子盒子不触发，没有冒泡事件
+
+mouseenter 事件只有在鼠标指针进入被选元素时被触发，mouseover 事件在鼠标指针进入任意子元素时也会被触发。
+mouseover使用它时，如果里面有子元素，子元素也会触发 对应mouseout
+mouseenter 使用它时，如果里面有子元素，子元素不会触发 对应mouseleave
+
+mouseout是冒泡的
+mouseleave是不冒泡的
+在一个多层容器结构中，如果只有你需要的那一层容器有绑移除事件，两个没有区别 ；
+如果多层绑有移除事件，前者有冒泡，结果是移出内层（可能还没有移出外层）触发内层的移除事件后，会冒泡到外层触发外层的移除的事件。
+后者的话只会触发内层的移出事件不会冒泡到外层。
+
+<div class="father">
+    <div class="son"></div>
+</div>
+
+
+<script>
+    var father = document.querySelector('.father');
+    var son = document.querySelector('.son');
+
+    father.addEventListener('mouseenter', function () {
+        console.log("只有经过自身盒子触发，经过子盒子不会触发");
+    })
+
+</script>
+</body>
+</html>

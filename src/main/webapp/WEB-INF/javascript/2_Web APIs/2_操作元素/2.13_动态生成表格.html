@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border: 1px solid #0f0f0f;
+            border-collapse: collapse;
+            border-spacing: 0;
+            text-align: center;
+        }
+
+        td, th {
+            border: 1px solid #0f0f0f;
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: red;
+            font-size: 16px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <caption>成绩表</caption>
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>科目</th>
+        <th>成绩</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--    <tr>-->
+    <!--        <td>name</td>-->
+    <!--        <td>java</td>-->
+    <!--        <td>100</td>-->
+    <!--        <td>shanchu</td>-->
+    <!--    </tr>-->
+    <!--    <tr>-->
+    <!--        <td>name</td>-->
+    <!--        <td>java</td>-->
+    <!--        <td>100</td>-->
+    <!--        <td>shanchu</td>-->
+    <!--    </tr>-->
+    </tbody>
+
+    <script>
+        var datas = [
+            {
+                name: '钟帅',
+                subject: '语文',
+                score: 100
+            },
+            {
+                name: '姚媛',
+                subject: '数学',
+                score: 98
+            },
+            {
+                name: '小微',
+                subject: '英语',
+                score: 88
+            },
+            {
+                name: '小猪',
+                subject: '英语',
+                score: 88
+            },
+            {
+                name: '沙雕',
+                subject: '英语',
+                score: 88
+            }
+        ];
+
+        var tb = document.querySelector("tbody");
+        for (var i = 0; i < datas.length; i++) {
+            // 创建行元素
+            var tr = document.createElement("tr");
+            tb.appendChild(tr);
+
+            // 每一行里创建单元格
+            for (var k in datas[i]) {
+                var td = document.createElement('td');
+                tr.appendChild(td);
+                td.innerHTML = datas[i][k];
+            }
+
+            // 创建操作元素单元格
+            var tdo = document.createElement('td');
+            tr.appendChild(tdo);
+            tdo.innerHTML = "<a href='javascript:;'>删除</a>";
+        }
+
+        var as = document.querySelectorAll("a");
+        for (var i = 0; i < datas.length; i++) {
+            as[i].onclick = function () {
+                tb.removeChild(this.parentNode.parentNode);
+            }
+        }
+
+
+    </script>
+</table>
+
+</body>
+</html>

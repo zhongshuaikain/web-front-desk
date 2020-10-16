@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+    // 不能直接给array数组赋值，如：array=值，
+    // 否则会覆盖数组所有的值 只能写array[第几个元素]=值；
+
+    var sum = 0;
+    var array = [];
+    var t=4;
+    for (var i = 0; i < t; i++) {
+
+        array[i] = prompt("请输入第" + (i+1) + '个元素')
+        sum = sum + parseFloat(array[i]);
+    }
+
+    alert('这'+t+'个元素的和是' + sum);
+    console.log(array);
+
+
+</script>
+
+
+<body>
+
+</body>
+</html>

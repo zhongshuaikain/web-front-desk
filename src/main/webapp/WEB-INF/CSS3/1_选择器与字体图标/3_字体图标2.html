@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src:  url('icomoon/fonts/icomoon.eot?cv013x');
+            src:  url('icomoon/fonts/icomoon.eot?cv013x#iefix') format('embedded-opentype'),
+            url('icomoon/fonts/icomoon.ttf?cv013x') format('truetype'),
+            url('icomoon/fonts/icomoon.woff?cv013x') format('woff'),
+            url('icomoon/fonts/icomoon.svg?cv013x#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+    div{
+        position: relative;
+        width: 249px;
+        height: 35px;
+        border: 1px solid skyblue;
+
+    }
+        div::after{
+            content: "\ea50";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-family: icomoon;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+
+</body>
+</html>

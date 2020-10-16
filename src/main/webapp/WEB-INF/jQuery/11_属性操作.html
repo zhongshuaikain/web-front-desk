@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+<a href="javascript:;" title="都挺好">都挺好啊</a>
+<div data-index="1"></div>
+<span></span>
+<script>
+    //获取元素固有的属性值 prop("属性名")
+    console.log($("a").prop("title"));
+    // 更改元素固有的属性值 prop（"属性名","属性值"）
+    $("a").prop("title", "利用prop方法改变他的属性值");
+    console.log($("a").prop("title"));
+
+
+    //获取自定义元素的属性值
+    console.log($("div").attr("data-index"));
+    // 更改自定义元素的属性值 prop（"属性名","属性值"）
+    $("div").attr("data-index", "5");
+    console.log($("div").attr("data-index"));
+
+    //data()方法可以在指定的元素上在内存中存储数据，并不会改变DOM元素结构，一旦页面刷新，存储的数据将被移除
+    $("span").data("u_name", "andy");
+    console.log($("span").data("u_name"));
+    //data()获取HTML5中的元素属性可以不带data前缀直接获取,返回的是数字型
+    console.log($("div").data("index"));
+</script>
+</body>
+</html>

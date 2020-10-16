@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+    //方法一
+    function reverse(arr) {
+        var newarr = [];
+        for (var i = arr.length - 1; i >= 0; i--) {
+            newarr[newarr.length] = arr[i];
+        }
+        return newarr;
+
+    }
+
+    var a = reverse([1, 2, 3, 4, 5, 7]);
+    alert(a);
+
+    // 方法二
+    // var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // array.reverse();
+    // console.log(array);
+
+
+</script>
+
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+返回上一级:               cd ..
+显示当前目录路径:          pwd
+清屏:                    clear
+列出当前目录的所有文件:      ls
+新建一个文件:             touch aaa.js
+删除一个文件:             rm aa.js
+新建一个目录:             mkdir 目录名
+删除一个目录:             rm -f 目录名
+移动aaa.js文件到b目录下:   mv aaa.js b
+查看历史命令:             history
+重新初始化终端:            reset
+帮助:                    help
+退出:                    exit
+
+终端命令
+    显示所有隐藏的文件夹:    defaults write com.apple.finder AppleShowAllFiles -bool true
+    关闭显示隐藏文件的命令:   defaults write com.apple.finder AppleShowAllFiles -bool false
+
+git相关命令:
+    查看配置:                 git config -l
+    查看当前用户配置:           git config --global --list
+    查看系统配置:              git config --system --list
+    修改当前用户配置的用户名:    git config --global user.name="zhongshuaikain"
+    修改当前用户配置的邮箱:      git config --global user.email="1667313912@qq.com"
+
+git的两种创建目录的方式:
+    创建本地项目:    git init
+    下载远程项目:    git clone 项目地址
+
+git的操作基本命令:
+    查看指定文件状态:          git status [filename]
+    查看所有文件状态:          git status
+    添加所有文件到缓存区:       git add .
+    提交缓存区的内容到本地仓库:  git commit -m
+
+码云创建仓库:
+    在.ssh文件下生成公钥:      ssh-keygen -t rsa
+    将公钥注册到码云中
+    在码云中创建一个仓库(开源许可证采用CPL3.0)
+    将码云下载的目录复制到项目目录中，在ideal中打开项目集成git

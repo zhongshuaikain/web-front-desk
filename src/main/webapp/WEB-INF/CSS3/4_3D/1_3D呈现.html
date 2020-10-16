@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D</title>
+
+    <style>
+
+        body {
+            perspective: 500px;
+        }
+
+        .father {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            margin: 300px 300px;
+            transform-style: preserve-3d;
+            transition: all 2s;
+
+        }
+
+
+        .father:hover {
+            transform: rotateY(-30deg);
+        }
+
+        div[class^="son"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 400px;
+            height: 400px;
+
+        }
+
+        .father div:first-child {
+            background-color: orange;
+
+        }
+
+        .father div:last-child {
+            transform: rotateX(60deg);
+            background-color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="father">
+    <div class="son1">222</div>
+    <div class="son2">33</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //两种特殊元素的获取 body和html
+    console.log(document.body);
+    console.log(document.documentElement);
+
+
+</script>
+
+<!-- 一、标签选择器 document.getElementsByName()-->
+
+<!--
+    二、
+       通过ID获取 使用 id名.getElementById()
+-->
+
+<div id="time">
+    2019-9-9
+</div>
+
+<script>
+    var timer = document.getElementById('time');
+    console.log(timer);
+    console.log(typeof timer);
+    console.dir(timer);
+</script>
+
+
+<!--
+    三、通过name获取元素 使用 元素名.getElementsByTagName()
+       利用该方法返回的值是获取过来元素对象的集合 是通过伪数组形式存储的
+-->
+<ul>
+    <li> 测试1</li>
+    <li> 测试2</li>
+    <li> 测试3</li>
+    <li> 测试4</li>
+    <li> 测试5</li>
+</ul>
+
+<ul id="ul2">
+    <li> test1</li>
+    <li> test2</li>
+    <li> test3</li>
+    <li> test4</li>
+    <li> test5</li>
+</ul>
+
+<script>
+    //获取第二个ul中的所有li元素
+    var ul2 = document.getElementById('ul2');
+    var name2=ul2.getElementsByTagName('li');
+    console.log(name2[0]);//输出伪数组中的第一个值
+    console.log(name2);
+</script>
+
+
+
+
+<!--
+    四、通过类选择器获取元素（该方法是HTML5新增的方法要考虑浏览器兼容问题，只支持IE9以上的版本）
+       使用 document.getElementsByClassName()获取元素
+-->
+<!--五、
+        HTML5新增的无需区分选择器的获取元素方法
+        1.根据指定选择器返回他的第一个元素 但是注意类选择器（ .类名 ），id选择器（ #id ）标签选择器则什么也不用加
+        2.根据指定选择器返回他的所有元素 无需2中的注意事项
+
+
+ -->
+<div class="box"> 盒子1 </div>
+<div class="box"> 盒子2 </div>
+<div id="nav">
+    <ul>
+        <li> 首页 </li>
+        <li> 产品 </li>
+    </ul>
+</div>
+<script>
+    //获取类名为box的所有元素
+    var boxs=document.getElementsByClassName("box");
+    console.log(boxs);
+
+    //获取指定选择器中的第一个元素
+    var nav1=document.querySelector('#nav');
+    console.log(nav1);
+    var box1=document.querySelector('.box');
+    console.log(box1);
+
+    //获取指定选择器中的所有元素
+    var all_box=document.querySelectorAll('box');
+    var all_id=document.querySelectorAll('nav');
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

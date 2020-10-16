@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+
+    //删除数组中的0元素，生成一个不含0的新数组
+    var array = [2, 0, 6, 1, 2, 0, 11, 0, 25, 7];
+    var newArray = [];
+
+    for (var i = 0; i < array.length; i++) {
+
+        if (array[i] !== 2) {
+            newArray[newArray.length] = array[i];
+            // 方法二   newArray.push(array[i]);
+        }
+    }
+    alert('不含0的新数组中的元素为：'+newArray);
+
+
+</script>
+
+<body>
+</body>
+</html>

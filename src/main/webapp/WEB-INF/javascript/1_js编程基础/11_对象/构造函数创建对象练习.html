@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+    function Game(name1,blood1,test1) {
+        this.name=name1;
+        this.blood=blood1;
+        this.test=test1;
+        this.fangfa=function (habit) {
+            console.log(habit)
+        }
+    }
+
+    var houyi=new Game('后裔','1500','test1');
+    houyi.fangfa('射日');
+    console.log(houyi.name,houyi['test'],houyi.blood);
+    console.log(houyi)
+
+
+
+
+</script>
+
+
+
+<body>
+
+</body>
+</html>

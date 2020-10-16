@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+
+    //输入一个数组，将数组中大于十的元素筛选出来，重新生成一个新数组
+
+    var array = [];
+    var newArray = [];
+    // var j = 0;
+    var length = 5;
+    for (var i = 0; i < length; i++) {
+        array[i] = prompt('请输入第' + (i + 1) + '个值');
+        if (array[i] > 10) {
+            newArray[newArray.length]=array[i];//利用数组.length中的length自动检测元素的变化
+            // newArray[j] = array[i];
+            // j++;
+        }
+    }
+    console.log(
+        '原来的数组是：' + array + '\n' +
+        '新建的数组是：' + newArray
+    );
+
+
+</script>
+
+
+<body>
+
+</body>
+</html>

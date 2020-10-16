@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+
+    <style>
+        div {
+            background-color: #1aff11;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+
+<script>
+    $('div').hide();
+
+    // jQuery入口函数
+    // $(function () {})和$(document).ready(function () {});都类似于js原生中的 window.addEventListener('DOMContentLoaded',function () {}),只等DOM结构渲染完毕即可执行函数代码，不必等到外部资源加载完成
+
+   // 方法一：
+    $(function () {
+        // 此处是页面DOM元素内容加载完成的入口
+    });
+
+    // 方法二：
+    $(document).ready(function () {
+        // 此处是页面DOM元素内容加载完成的入口
+    });
+</script>
+</body>
+</html>
