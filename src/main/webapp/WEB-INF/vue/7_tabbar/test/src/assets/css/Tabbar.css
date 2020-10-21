@@ -1,0 +1,20 @@
+.Tabbar {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 49px;
+
+}
+
+.TabbarItem {
+  flex: 1;
+  text-align: center;
+}
+
+.TabbarItem img{
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
