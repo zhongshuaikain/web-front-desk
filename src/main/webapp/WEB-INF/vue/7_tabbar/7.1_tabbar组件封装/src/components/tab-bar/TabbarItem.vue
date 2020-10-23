@@ -1,5 +1,8 @@
 <template>
-  $END$
+
+  <div class="tab-bar-item">
+    <slot></slot>
+  </div>
 </template>
 
 <script>

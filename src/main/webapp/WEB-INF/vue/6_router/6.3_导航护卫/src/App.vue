@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <router-link replace tag="button" to="/index">首页</router-link>
+    <router-link replace tag="button" to="/about">关于</router-link>
+    <router-link replace tag="button" to="/user">用户</router-link>
+    <button @click="onclick">档案</button>
+
+<keep-alive exclude="Index,about">
+  <router-view/>
+</keep-alive>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    methods:{
+      onclick(){
+        this.$router.push("/profile")
+      }
+    }
+
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

@@ -41,4 +41,3 @@ git的操作基本命令:
     将项目添加到暂缓区:        git add .
     将项目提交到本地:          git commit
     将项目push到github上:     git push
-    ok

@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
 </head>
 <body>
-$END$
+
+
+<script>
+  // 求数组[2,6,1,77,44,83,3]中的最大值
+  var arr = [2, 6, 1, 77, 44, 83, 3];
+  var max = arr[0];
+  for (let i of arr){
+    if (max<i){
+      max=i;
+    }
+  }
+  console.log(max)
+  alert('数组中的最大值是'+max)
+</script>
 </body>
 </html>

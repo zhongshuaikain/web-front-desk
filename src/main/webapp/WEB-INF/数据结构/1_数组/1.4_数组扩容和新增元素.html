@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
 </head>
 <body>
-$END$
+
+<script>
+  var arr = [4, 2, 9]; //数组长度为3
+  arr.length = 10; //此处扩容，数组长度变成10
+  arr[3] = 100; //添加一个数组值，数组会自动扩容。但是在Java语言或者c语言里面，是不允许这样操作的，在Java中如果需要添加元素超出了原有的数组长度，则需要扩容后重新添加
+  alert(arr)
+  console.log(arr[7]);//undefinded
+  arr = '直接赋值，数据丢失！'//直接给数组名赋值，数据丢失
+</script>
+
 </body>
 </html>

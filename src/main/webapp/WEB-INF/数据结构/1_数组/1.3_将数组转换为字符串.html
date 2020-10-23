@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
 </head>
 <body>
-$END$
+
+<script>
+  // 将数组['red','green','blue','pink']，转换成'red～green～blue～pink'字符串
+  var arr = new Array('red', 'green', 'blue', 'pink');
+  var str = '';
+  var sep = '~'
+  for (let i in arr) {
+    str += arr[i];
+    if (i == arr.length - 1) {
+      break;
+    }
+    str += sep;
+  }
+  alert(str);
+
+</script>
 </body>
 </html>

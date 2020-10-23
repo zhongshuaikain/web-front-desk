@@ -9,7 +9,7 @@ vue的脚手架搭建：
    安装脚手架：
       npm install -g @vue/cli (该方法是安装脚手架3版本)
       拉取脚手架2版本：npm install @vue/cli-init
-      (当安装不能成功时： npm clea cache -force 清理缓存文件 )
+      (当安装不能成功时： npm clean cache -force 清理缓存文件 )
 
    Vue CLI2初始化项目：
        vue init webpack 项目名称

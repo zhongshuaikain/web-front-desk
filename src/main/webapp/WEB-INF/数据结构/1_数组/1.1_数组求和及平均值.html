@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
 </head>
 <body>
-$END$
+
+<script>
+  // 求数组 [2,43,51,90,6]的和以及平均值
+  var arr = [2, 43, 51, 90, 6];
+  var sum = 0;
+  var avg = 0;
+  // 方式一 i取出来的是arr的索引值
+  // for (var i = 0; i < arr.length; i++) {
+  //   console.log(i)
+  //   sum = sum + arr[i];
+  // }
+
+  // 方式二 i取出来的是arr的索引值
+  // for (let i of arr) {
+  //   console.log(i)
+  //   sum = sum + i;
+  // }
+
+  // 方式三 i取出来的是arr内的每个对象
+  for (let i of arr) {
+    console.log(i);
+    sum = sum + i;
+  }
+
+  avg = sum / arr.length;
+  alert('arr数组的和是' + sum);
+  alert('arr数组的平均值是' + avg)
+</script>
 </body>
 </html>
