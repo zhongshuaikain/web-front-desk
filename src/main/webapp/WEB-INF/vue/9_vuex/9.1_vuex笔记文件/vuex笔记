@@ -1,0 +1,27 @@
+vuex安装
+    npm install vuex --save
+
+vuex使用步骤：
+    调用vue.use(vuex)
+    创建store对象
+        const store = new Vuex.Store
+    导出store对象
+    将store对象挂载在Vue实例中
+    在Vue实例中注册store为Vue的全局组件，使得任何组件内部都能使用store
+        Vue.prototype.$store = store
+
+vuex状态管理图中：
+    Action:    处理异步操作（发送网络请求、向后端请求API）
+    Mutations: 只能处理同步操作
+    Devtools:  谷歌的浏览器插件工具，只能自动跟踪记载同步操作的每一步
+
+
+   const store = new Vuex.Store({
+      state:{}      保存共享状态，单一状态树(只需要一个store对象进行保存信息)
+      mutation:{}
+      actions:{}    异步操作
+      getter:{}     类似于组件中的计算属性
+      modules:{}    专门划分模块，针对不同的模块进行相关数据的保存
+   })
+   通过 this.$store.state 属性来访问状态
+   通过 this.$store.commit('mutation中方法')来修改状态
